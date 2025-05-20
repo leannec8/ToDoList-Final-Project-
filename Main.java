@@ -16,5 +16,6 @@ public class Main
         test.remove("CSA");
         System.out.println(test.getAssignmentNames());
         System.out.println(test.getDueDates());
+        System.out.println("Test");
     }
 }
