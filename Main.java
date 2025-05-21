@@ -13,9 +13,9 @@ public class Main
         test.add("CSA", "5-17-25");
         System.out.println(test.getAssignmentNames());
         System.out.println(test.getDueDates());
-        test.remove("CSA");
+        //test.remove("CSA");
         System.out.println(test.getAssignmentNames());
         System.out.println(test.getDueDates());
-        System.out.println("Test");
+        System.out.println(test.getAssignments("5-17-25"));
     }
 }

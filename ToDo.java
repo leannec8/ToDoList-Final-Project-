@@ -42,4 +42,22 @@ public class ToDo
             }
         }
     }
+
+    public ArrayList<String> getAssignments(String date)
+    {
+        ArrayList<String> oneDay = new ArrayList<String>();
+        for (int i = 0; i < due_dates.size(); i++)
+        {
+            if (due_dates.get(i).equals(date))
+            {
+                oneDay.add(assignment_names.get(i));
+            }
+        }
+        return oneDay;
+    }
+
+    //public String toString()
+    //{
+    //    String s = "";
+    //}
 }
