@@ -43,7 +43,7 @@ public class ToDo
         }
     }
 
-    public ArrayList<String> getAssignments(String date)
+    public String getAssignments(String date)
     {
         ArrayList<String> oneDay = new ArrayList<String>();
         for (int i = 0; i < due_dates.size(); i++)
@@ -53,11 +53,24 @@ public class ToDo
                 oneDay.add(assignment_names.get(i));
             }
         }
-        return oneDay;
+        String s = "All Assignments Due On " + date + ":";
+        for (int i = 0; i < oneDay.size(); i++)
+        {
+            s += "\n";
+            s = s + (i+1) + ". " + oneDay.get(i);
+        }
+        return s;
     }
 
-    //public String toString()
-    //{
-    //    String s = "";
-    //}
+    public String printList()
+    {
+        String s = "Your To-Do List:";
+        s += "\n";
+        for (int i = 0; i < assignment_names.size(); i++)
+        {
+            s = s + (i+1) + ". " + assignment_names.get(i) + " (due on: " + due_dates.get(i) + ")";
+            s += "\n";
+        }
+        return s;
+    }
 }
