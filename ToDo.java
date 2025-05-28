@@ -23,9 +23,9 @@ public class ToDo
     }
 
     //adds the assignment name and date onto seperate ArrayList at the same index
-    public void add(String assignement, String due_date)
+    public void add(String assignment, String due_date)
     {
-        assignment_names.add(assignement);
+        assignment_names.add(assignment);
         due_dates.add(due_date);
     }
 
