@@ -49,7 +49,6 @@ public class Main
                 break;
             }
             else System.out.println("This is not an option. Try again." + "\n");
-            System.out.println();
         }
     }
 }
