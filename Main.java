@@ -10,12 +10,13 @@ public class Main
     public static void main(String[] args)
     {
         ToDo test = new ToDo();
+        Points game = new Points();
 
         //use scanner to interact with user
         int i = 1;
         Scanner scanner = new Scanner(System.in);
         while (i == 1) {
-            System.out.println("1. Add, 2. Mark As Done, 3. View A Day's Work, 4. View Total List, or 5. Quit");
+            System.out.println("1. Add, 2. Mark As Done, 3. View A Day's Work, 4. View Total List, 5. View Points & Level or 6. Quit");
             System.out.println("Select one to continue: ");
             String choice = scanner.nextLine();
             if (choice.equalsIgnoreCase("Add"))
@@ -30,8 +31,9 @@ public class Main
             else if (choice.equalsIgnoreCase("Mark As Done"))
             {
                 System.out.println("What is the name of the assignment you want to mark as done?");
-                String removeName = scanner.nextLine();
-                test.remove(removeName);
+                String markName = scanner.nextLine();
+                test.markAsDone(markName);
+                game.addPoints();
                 System.out.println("Your assignment has been marked as done!" + "\n");
             }
             else if (choice.equalsIgnoreCase("View A Day's Work"))
@@ -43,6 +45,10 @@ public class Main
             else if (choice.equalsIgnoreCase("View Total List"))
             {
                 System.out.println(test.printList());
+            }
+            else if (choice.equalsIgnoreCase("View Points & Level"))
+            {
+                System.out.println(game.getLevel() + "\n");
             }
             else if (choice.equalsIgnoreCase("Quit"))
             {

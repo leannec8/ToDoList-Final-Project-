@@ -29,16 +29,16 @@ public class ToDo
         due_dates.add(due_date);
     }
 
-    //utilizes the assignment name to remove it from the names ArrayList
-    //also removes corresponding date at the same index in the dates ArrayList
-    public void remove(String assignment)
+    //looks through the assignment ArrayList to add a check mark on the end of it
+    public void markAsDone(String assignment)
     {
         for (int i = 0; i < assignment_names.size(); i++)
         {
             if (assignment_names.get(i).equals(assignment))
             {
-                assignment_names.remove(i);
-                due_dates.remove(i);
+                String temp = assignment_names.get(i);
+                String other = assignment_names.get(i) + " ✅";
+                assignment_names.set(i, other);
             }
         }
     }
